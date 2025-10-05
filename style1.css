@@ -1,0 +1,101 @@
+/* Background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #2e8b57, #66bb6a, #c8e6c9);
+  background-size: 300% 300%;
+  animation: bgAnimation 8s infinite alternate;
+}
+
+/* Quiz Container */
+.quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  color: #fff;
+}
+
+.quiz-container h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Quiz Card */
+.quiz-box {
+  background: #fff;
+  color: #333;
+  width: 450px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease;
+}
+
+.quiz-box h2 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #2e7d32;
+}
+
+/* Options */
+.quiz-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quiz-box li {
+  margin: 12px 0;
+}
+
+.quiz-box label {
+  cursor: pointer;
+  padding: 12px;
+  display: block;
+  border: 2px solid #c8e6c9;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.quiz-box input {
+  display: none;
+}
+
+.quiz-box label:hover {
+  background: #e8f5e9;
+  transform: scale(1.02);
+}
+
+/* Button */
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: #2e7d32;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #1b5e20;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bgAnimation {
+  from { background-position: left; }
+  to { background-position: right; }
+}
+
